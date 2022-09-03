@@ -1,6 +1,6 @@
 # Coffee Delivery
 
-Solution developed for Rocketseat Ignite/ReactJS Challenge 02 [Ignite - ReactJS](https://app.rocketseat.com.br/).
+Solution developed for Rocketseat Ignite/ReactJS Challenge 02 [Rocketseat](https://app.rocketseat.com.br/).
 
 ## Table of contents
 
