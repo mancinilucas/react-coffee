@@ -8,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
 
     font-family: 'Baloo 2', cursive;
     font-family: 'Roboto', sans-serif;
+
+    list-style: none;
   }
   
   body{

@@ -15,6 +15,11 @@ export const NavigationContainer = styled.nav`
 export const LocationContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 7.875rem;
+  height: 2.375rem;
+  border-radius: 6px;
+  background-color: ${(props) => props.theme['purple-100']};
 
   .map-icon {
     color: ${(props) => props.theme['purple-300']};
@@ -23,5 +28,19 @@ export const LocationContainer = styled.div`
   span {
     font-size: 0.875rem;
     color: ${(props) => props.theme['purple-500']};
+  }
+`
+export const Chart = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: 6px;
+
+  background-color: ${(props) => props.theme['yellow-100']};
+
+  .chart-icon {
+    color: ${(props) => props.theme['yellow-500']};
   }
 `

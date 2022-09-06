@@ -1,6 +1,7 @@
 import mainLogo from '../../assets/main-logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import {
+  Chart,
   HeaderContainer,
   LocationContainer,
   NavigationContainer,
@@ -17,9 +18,9 @@ export function Header() {
           <MapPin size={22} weight="fill" className="map-icon" />
           <span>Itamaraju, BA</span>
         </LocationContainer>
-        <div>
+        <Chart>
           <ShoppingCart size={18} weight="fill" className="chart-icon" />
-        </div>
+        </Chart>
       </NavigationContainer>
     </HeaderContainer>
   )
