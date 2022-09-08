@@ -22,12 +22,13 @@ export const IntroInfo = styled.div`
   flex-direction: column;
 
   h1 {
-    font: bold 3rem/62.4px 'Baloo 2', cursive;
+    font: bold 3rem/3.9rem 'Baloo 2', cursive;
     color: ${(props) => props.theme['brown-900']};
+    margin-bottom: 1rem;
   }
 
   p {
-    font: 1.25rem/26px 'Roboto', sans-serif;
+    font: 1.25rem/1.6rem 'Roboto', sans-serif;
     color: ${(props) => props.theme['brown-800']};
     margin-bottom: 4rem;
   }
@@ -37,33 +38,42 @@ export const IntroCards = styled.div`
   width: 35.4rem;
   .card-template {
     display: grid;
-    grid-template-columns: 231px 294px;
-    grid-template-rows: repeat(2, 32px);
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-  }
-
-  .card1 {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-  .card2 {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  .card3 {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  .card4 {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-template-columns: 14.5rem 18.375rem;
+    grid-template-rows: repeat(2, 2rem);
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 1.25rem;
   }
 
   ul li {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+
+    span {
+      color: ${(props) => props.theme['brown-500']};
+      line-height: 1.3rem;
+    }
   }
 
   ul li img {
     width: 2rem;
     height: 2rem;
+  }
+`
+
+export const ShowcaseContainer = styled.div`
+  margin-bottom: 9.8125rem;
+  h2 {
+    font: bold 2rem/2.6rem 'Baloo 2', cursive;
+    color: ${(props) => props.theme['brown-800']};
+    margin-bottom: 3.375rem;
+  }
+
+  .showcase-template {
+    display: grid;
+    grid-template-columns: repeat(4, 16rem);
+    grid-template-rows: repeat(4, 19.375rem);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2.5rem;
   }
 `
