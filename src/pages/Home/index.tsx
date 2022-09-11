@@ -1,3 +1,6 @@
+import { Header } from '../../components/Header'
+import { ProductList } from '../../assets/coffee/productList'
+
 import {
   HomeContainer,
   IntroCards,
@@ -7,12 +10,19 @@ import {
 } from './styles'
 
 import heroImg from '../../assets/hero.svg'
-import coffeeCard from '../../assets/coffee-card.svg'
 import coffeIcon from '../../assets/coffee-icon.svg'
 import chartIcon from '../../assets/chart-icon.svg'
 import timerIcon from '../../assets/timer-icon.svg'
 import packageIcon from '../../assets/package-icon.svg'
-import { Header } from '../../components/Header'
+
+interface ProductListProps {
+  id: number
+  title: string
+  description: string
+  category: string[]
+  price: number
+  image: string
+}
 
 export function Home() {
   return (
@@ -56,50 +66,18 @@ export function Home() {
         <ShowcaseContainer>
           <h2>Nossos cafés</h2>
           <div>
-            <ul className="showcase-template">
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-              <li>
-                <img src={coffeeCard} alt="" />
-              </li>
-            </ul>
+            {ProductList.map((product: ProductListProps) => {
+              return (
+                <ul key={product.id} className="showcase-template">
+                  <li>
+                    <img src={product.image} alt="" />
+                    <strong>{product.title}</strong>
+                    <p>{product.description}</p>
+                    <span>{product.price}</span>
+                  </li>
+                </ul>
+              )
+            })}
           </div>
         </ShowcaseContainer>
       </HomeContainer>
