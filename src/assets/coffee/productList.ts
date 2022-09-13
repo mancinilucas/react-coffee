@@ -13,7 +13,7 @@ import havaiano from './havaiano.svg'
 import arabe from './arabe.svg'
 import irlandes from './irlandes.svg'
 
-export const ProductList = [
+export const productList = [
   {
     id: 1,
     title: 'Expresso tradicional',
@@ -131,3 +131,5 @@ export const ProductList = [
     image: irlandes,
   },
 ]
+
+export type ProductListProps = typeof productList[0]

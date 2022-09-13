@@ -76,4 +76,95 @@ export const ShowcaseContainer = styled.div`
     grid-column-gap: 2rem;
     grid-row-gap: 2.5rem;
   }
+
+  li {
+    background-color: ${(props) => props.theme['gray-100']};
+    border-radius: 6px 36px;
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height: 19.375rem;
+
+    img {
+      width: 7.5rem;
+      height: 7.5rem;
+      position: relative;
+      left: calc(50% - 7.5rem / 2);
+      top: -1.25rem;
+    }
+
+    .product-category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+
+      span {
+        background-color: ${(props) => props.theme['yellow-100']};
+        padding: 4px 8px;
+        border-radius: 100px;
+      }
+
+      span p {
+        font: bold 0.625rem/0.8rem 'Roboto', sans-serif;
+        color: ${(props) => props.theme['yellow-500']};
+        text-transform: uppercase;
+      }
+    }
+
+    strong {
+      margin-top: 1rem;
+      font: bold 1.25rem/1.6 'Baloo 2', cursive;
+      color: ${(props) => props.theme['brown-800']};
+      text-align: center;
+    }
+
+    p {
+      margin: 0.5rem 1.25rem 0;
+      font: 0.875rem/1.3rem 'Roboto', sans-serif;
+      color: ${(props) => props.theme['brown-300']};
+      text-align: center;
+    }
+
+    .product-chart {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1.5rem 0 1.25rem;
+
+      div:first-child {
+        font: 0.875rem/1.3rem 'Roboto', sans-serif;
+        color: ${(props) => props.theme['brown-500']};
+
+        strong {
+          font: bold 1.5rem/1.6rem 'Baloo 2', cursive;
+          color: ${(props) => props.theme['brown-500']};
+        }
+      }
+
+      .product-chart-quantity {
+        background-color: ${(props) => props.theme['gray-300']};
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border-radius: 6px;
+
+        button {
+          border: none;
+          background-color: ${(props) => props.theme['gray-300']};
+        }
+
+        .quantity-icon {
+          color: ${(props) => props.theme['purple-500']};
+        }
+      }
+
+      .chart-button {
+        margin-left: 0.5rem;
+      }
+    }
+  }
 `

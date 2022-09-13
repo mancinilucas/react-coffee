@@ -1,5 +1,6 @@
 import { Header } from '../../components/Header'
-import { ProductList } from '../../assets/coffee/productList'
+import { productList } from '../../assets/coffee/productList'
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 
 import {
   HomeContainer,
@@ -66,14 +67,50 @@ export function Home() {
         <ShowcaseContainer>
           <h2>Nossos cafés</h2>
           <div>
-            {ProductList.map((product: ProductListProps) => {
+            {productList.map((product: ProductListProps) => {
               return (
                 <ul key={product.id} className="showcase-template">
                   <li>
                     <img src={product.image} alt="" />
+                    <div className="product-category">
+                      {product.category.map((element) => {
+                        return (
+                          <span key={element}>
+                            <p>{element}</p>
+                          </span>
+                        )
+                      })}
+                    </div>
                     <strong>{product.title}</strong>
                     <p>{product.description}</p>
-                    <span>{product.price}</span>
+                    <div className="product-chart">
+                      <div>
+                        R$
+                        <strong>{product.price}</strong>
+                      </div>
+                      <div className="product-chart-quantity">
+                        <button>
+                          <Minus
+                            size={14}
+                            weight="fill"
+                            className="quantity-icon"
+                          />
+                        </button>
+                        <span>1</span>
+                        <button>
+                          <Plus
+                            size={14}
+                            weight="fill"
+                            className="quantity-icon"
+                          />
+                        </button>
+                      </div>
+                      <div className="chart-button">
+                        <button>
+                          <ShoppingCart size={22} weight="fill" />
+                        </button>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               )
