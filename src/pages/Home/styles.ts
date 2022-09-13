@@ -84,6 +84,7 @@ export const ShowcaseContainer = styled.div`
     flex-direction: column;
     width: 16rem;
     height: 19.375rem;
+    padding: 0 1.25rem;
 
     img {
       width: 7.5rem;
@@ -101,11 +102,14 @@ export const ShowcaseContainer = styled.div`
 
       span {
         background-color: ${(props) => props.theme['yellow-100']};
-        padding: 4px 8px;
+        padding: 0.25rem 0.5rem;
         border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      span p {
+      span > p {
         font: bold 0.625rem/0.8rem 'Roboto', sans-serif;
         color: ${(props) => props.theme['yellow-500']};
         text-transform: uppercase;
@@ -120,32 +124,40 @@ export const ShowcaseContainer = styled.div`
     }
 
     p {
-      margin: 0.5rem 1.25rem 0;
       font: 0.875rem/1.3rem 'Roboto', sans-serif;
       color: ${(props) => props.theme['brown-300']};
       text-align: center;
     }
 
     .product-chart {
-      width: 100%;
+      width: 13rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 1.5rem 0 1.25rem;
+      margin: 1.5rem 0.25rem 1.25rem;
 
       div:first-child {
+        width: 4.1875rem;
+        height: 2rem;
         font: 0.875rem/1.3rem 'Roboto', sans-serif;
         color: ${(props) => props.theme['brown-500']};
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         strong {
-          font: bold 1.5rem/1.6rem 'Baloo 2', cursive;
+          margin-top: 0;
+          font: 800 1.5rem/1.6rem 'Baloo 2', cursive;
           color: ${(props) => props.theme['brown-500']};
         }
       }
 
       .product-chart-quantity {
         background-color: ${(props) => props.theme['gray-300']};
-        padding: 8px;
+        padding: 8.5px 8px;
+        margin-left: 23px;
+        width: 72px;
+        height: 38px;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -164,6 +176,21 @@ export const ShowcaseContainer = styled.div`
 
       .chart-button {
         margin-left: 0.5rem;
+
+        button {
+          border: none;
+          border-radius: 6px;
+          width: 38px;
+          height: 38px;
+          background-color: ${(props) => props.theme['purple-500']};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            color: ${(props) => props.theme['gray-100']};
+          }
+        }
       }
     }
   }
